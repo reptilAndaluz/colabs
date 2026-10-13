@@ -1,0 +1,56 @@
+:root {
+  --bg: black;
+  --surface: #1a1d24;
+  --text: #e8eaed;
+  --accent: green;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.controls { display: flex; gap: .5rem; justify-content: center; }
+
+button, .file-label {
+  padding: .6rem 1rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.preview { 
+    margin: 1rem 0; 
+}
+
+
+.preview canvas, .preview img {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+.results { list-style: none; padding: 0; margin: 0; }
+.results li {
+  display: grid;
+  grid-template-columns: 1fr 3fr auto;
+  gap: .5rem;
+  align-items: center;
+  padding: .4rem 0;
+  text-align: left;
+}
+.results progress { width: 100%; height: 10px; }
